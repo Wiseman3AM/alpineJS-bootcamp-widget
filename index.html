@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AlpineJS Bootcamp Widgets</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script defer src="functions/itemsOver20.js"></script>
+    <script defer src="functions/totalPhoneBill.js"></script>
+    <script defer src="functions/transportFee.js"></script>
+</head>
+
+<body>
+    <div>
+        <h1>Greet function</h1>
+        <div x-data="{ name: '', 
+            move: false,  
+            move1: false, 
+            move2: false, 
+            move3: false, 
+            move4: false, 
+            move5: false, 
+            greet: ['Avuxeni ', 'Thobelang  ', 'Ndaa ', 'Dumelang  ','Sawubona ', 'Goeie dag '], }">
+
+            <input class="nameBar" type="text" x-model="name" placeholder="Enter your name">
+
+            <section></section>
+
+            <section class="greeting">
+                <button class="greetButton" x-on:click="move = !move">Xitsonga</button>
+                <span x-show="move" x-text="greet[0] + name"></span>
+            </section>
+
+            <section class="greeting">
+                <button class="greetButton" x-on:click="move1 = !move1">Sepedi</button>
+                <span x-show="move1" x-text="greet[1] + name"></span>
+            </section>
+
+            <section class="greeting">
+                <button class="greetButton" x-on:click="move2 = !move2">Tshivenda</button>
+                <span x-show="move2" x-text="greet[2] + name"></span>
+            </section>
+
+            <section class="greeting">
+                <button class="greetButton" x-on:click="move3 = !move3">Sesotho</button>
+                <span x-show="move3" x-text="greet[3] + name"></span>
+            </section>
+
+            <section class="greeting">
+                <button class="greetButton" x-on:click="move4 = !move4">Zulu</button>
+                <span x-show="move4" x-text="greet[4] + name"></span>
+            </section>
+
+            <section class="greeting">
+                <button class="greetButton" x-on:click="move5 = !move5">Afrikaans</button>
+                <span x-show="move5" x-text="greet[5] + name"></span>
+            </section>
+        </div>
+    </div>
+
+    <div>
+
+
+        <div>
+            <h1>Items</h1>
+            <div class="item">
+                <input class="itemName" type="text" placeholder="Item Name">
+                <input class="qtyNo" type="number" placeholder="Quantity">
+                <button class="addItem">Add items</button>
+            </div>
+            
+            <h2>Items Over 20</h2>
+            <ol class="itemsOver20"></ol>
+            
+            <h2>Items 20 and Under</h2>
+            <ol class="items20Under"></ol>
+        </div>
+
+        <div>
+            <h1>Total phone bill</h1>
+
+<div>
+
+<section>
+  <label>Number of Calls:</label>
+  <button class="increment">+</button>
+  <button class="decrement">-</button>
+  <span class="call"></span>
+</section>
+
+<section>
+  <div>
+    <label>Number of SMS:</label>
+    <button class="increment1">+</button>
+    <button class="decrement1">-</button>
+    <span class="sms"></span>
+  </div>
+</section>
+
+<section>
+  <label>Total cost:</label>
+  <span class="totalCost"></span>
+</section>
+
+<button class="Calculate">Calculate Total Cost</button>
+</div>
+
+<div>
+    <h1>Transport fee</h1>
+    <section>
+      <input class="morning" id="mRadio" type="radio" name="transport"><label for="mRadio">Morning shift</label>
+    </section>
+  
+    <section>
+      <input class="day" id="dRadio" type="radio" name="transport"><label for="dRadio">Afternoon shift</label>
+    </section>
+  
+    <section>
+      <input class="night" id="nRadio" type="radio" name="transport"><label for="nRadio">Night shift</label>
+    </section>
+   
+    <button class="calculateCost">Calculate fee</button>
+    
+ 
+    <span class="transportCost"></span>
+    
+</div>
+  
+
+
+
+
+
+
+</body>
+</html>
