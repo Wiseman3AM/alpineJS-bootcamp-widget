@@ -1,0 +1,136 @@
+body{
+    background-color: #d4a373;
+    margin-left: 1.5em;
+    margin-right: 1.5em;
+    text-align: left;
+    text-align: justify;
+    font-family: Helvetica;
+}
+h2{
+    margin-left: 0.5em;
+    text-align: left;
+}
+
+.title{
+    background-color: #fefae0;
+    border: #fefae0 solid 3px;
+    margin-top: 1.5em;
+    text-align: center;
+}
+
+
+
+.greetContent,
+.itemCon,
+.phoneCon,
+.feeCon{
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+.transportCost,
+.costbill,
+.sms,
+.call,
+ol,
+.disText{
+    border: 0.1px solid white;
+    background-color: white;
+} 
+
+
+.inventList{
+    display: flex;
+    text-align: left;
+}
+
+.inventList{
+    flex: 1;
+}
+
+.img0{
+    background-image: url("inventory.jpg");
+    background-size: cover;;
+    background-position: center;
+    flex: 1;
+}
+
+.greetButton{
+    width: 100px;
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+    font-weight: bolder;
+}
+
+p{
+    font-size: large;
+}
+
+.greet{
+    background-color: #fefae0;
+    border: 0.1px solid #fefae0 ;
+    margin-top: 1em;
+   
+}
+
+.over20{
+    background-color: #fefae0;
+    border: 0.1px solid #fefae0 ;
+    margin-top: 1em;
+}
+
+.phone{
+    background-color: #fefae0;
+    border: 0.1px solid #fefae0 ;
+    margin-top: 1em;
+}
+
+.tfee{
+    background-color: #fefae0;
+    border: 0.1px solid #fefae0 ;
+    margin-top: 1em;
+}
+
+.pImg{
+    display: flex;
+}
+.feeImg{
+    display: flex;
+}
+
+.radios0{
+    display: flex;
+}
+
+@media (min-width:480px){
+    .greet{
+        width: 50%;
+    }
+    
+    .over20{
+        width: 50%;
+        margin-left: 1em;
+    }
+    
+    .phone{
+        width: 50%;
+    }
+    
+    .tfee{
+        margin-left: 1em;
+        width: 50%;
+    }
+    .top, .bottom{
+        display: flex;
+    }
+}
+
+
+
+
+    .gSA{
+        display: flex;
+    }
+
+
+

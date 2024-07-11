@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,12 +10,20 @@
     <script defer src="functions/itemsOver20.js"></script>
     <script defer src="functions/totalPhoneBill.js"></script>
     <script defer src="functions/transportFee.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <div>
-        <h1>Greet function</h1>
-        <div x-data="{ name: '', 
+
+    <h1 class="title">Widgets for user convience</h1>
+
+    <div class="top">
+        <div class="greet">
+            <section class="gSA">
+            <h2>Greetings widget</h2>
+            <img src="saFlaf.jpg" alt="South African flag" style="width: 20%; height: 20%; padding-top: 1.5em; margin-left: 0.5em;">
+        </section>
+            <div class="greetContent" x-data="{ name: '', 
             move: false,  
             move1: false, 
             move2: false, 
@@ -23,110 +32,165 @@
             move5: false, 
             greet: ['Avuxeni ', 'Thobelang  ', 'Ndaa ', 'Dumelang  ','Sawubona ', 'Goeie dag '], }">
 
-            <input class="nameBar" type="text" x-model="name" placeholder="Enter your name">
+                <p class="greetText"> Enter your name and click one of the buttons below to learn how to greet in one of the country's official languages.</p>
 
-            <section></section>
+                <input class="nameBar" type="text" x-model="name" placeholder="Enter your name">
 
-            <section class="greeting">
-                <button class="greetButton" x-on:click="move = !move">Xitsonga</button>
-                <span x-show="move" x-text="greet[0] + name"></span>
-            </section>
+                <section>
 
-            <section class="greeting">
-                <button class="greetButton" x-on:click="move1 = !move1">Sepedi</button>
-                <span x-show="move1" x-text="greet[1] + name"></span>
-            </section>
+                    <section class="greeting">
+                        <button class="greetButton" x-on:click="move = !move">Xitsonga</button>
+                        <div class="disText" x-show="move" x-text="greet[0] + name"></div>
+                    </section>
 
-            <section class="greeting">
-                <button class="greetButton" x-on:click="move2 = !move2">Tshivenda</button>
-                <span x-show="move2" x-text="greet[2] + name"></span>
-            </section>
+                    <section class="greeting">
+                        <button class="greetButton" x-on:click="move1 = !move1">Sepedi</button>
+                        <div class="disText" x-show="move1" x-text="greet[1] + name"><div>
+                    </section>
 
-            <section class="greeting">
-                <button class="greetButton" x-on:click="move3 = !move3">Sesotho</button>
-                <span x-show="move3" x-text="greet[3] + name"></span>
-            </section>
+                    <section class="greeting">
+                        <button class="greetButton" x-on:click="move2 = !move2">Tshivenda</button>
+                        <div class="disText" x-show="move2" x-text="greet[2] + name"><div>
+                    </section>
 
-            <section class="greeting">
-                <button class="greetButton" x-on:click="move4 = !move4">Zulu</button>
-                <span x-show="move4" x-text="greet[4] + name"></span>
-            </section>
+                    <section class="greeting">
+                        <button class="greetButton" x-on:click="move3 = !move3">Sesotho</button>
+                        <div class="disText" x-show="move3" x-text="greet[3] + name"><div>
+                    </section>
 
-            <section class="greeting">
-                <button class="greetButton" x-on:click="move5 = !move5">Afrikaans</button>
-                <span x-show="move5" x-text="greet[5] + name"></span>
-            </section>
+                    <section class="greeting">
+                        <button class="greetButton" x-on:click="move4 = !move4">Zulu</button>
+                        <div class="disText" x-show="move4" x-text="greet[4] + name"><div>
+                    </section>
+
+                    <section class="greeting">
+                        <button class="greetButton" x-on:click="move5 = !move5">Afrikaans</button>
+                        <div class="disText" x-show="move5" x-text="greet[5] + name"><div>
+                    </section>
+
+                </section>
+            </div>
         </div>
+
+        <div class="over20">
+            
+            <h2>Inventory management widget</h2>
+            
+        <section class="itemCon">
+
+            <p>This is a inventory a inventory management widget which assists users to keep track of their items by dividing them between items over 20 and under 20, please enter items and their quantity into the list and click the button.</p>
+            <div class="item">
+                <section style="margin-bottom: 0.2em;">
+                    <input class="itemName" type="text" placeholder="Item Name">
+                </section>
+                    <section style="margin-bottom: 0.2em;">
+                <input class="qtyNo" type="number" placeholder="Quantity">
+            </section >
+                <section style="margin-bottom: 0.2em;">
+                <button style="font-weight: bolder;" class="addItem">Add items</button>
+            </section>
+            </div>
+
+            <div class="inventList">
+                <section class="invent">
+            <h3>Items Over 20</h3>
+            <ol class="itemsOver20"></ol>
+
+            <h3>Items 20 and Under</h3>
+            <ol class="items20Under"></ol>
+        </section>
+
+        <section class="img0">
+            <!-- <img src="inventory.jpg" alt="inventory image" style="width:60%; --> 
+        </section>
+    
+        </div>
+    </section>
+        </div>
+    
     </div>
 
+    <div class="bottom">
+    <div class="phone">
+        
+        <section class="pImg">
+        <h2>Phone bill calculator</h2>
+        <img src="phone.png" alt="phone image" style="width: 15%; height: 25%; margin-left: 0.5em; margin-top: 1.5em;">
+</section>
+
+
+
+<section class="phoneCon" style="margin-top: 0.5em;">
+       
+    <p>This widget is a phone bill calculator which calculates the total phone bill based of calls and sms's.</p>
+<p>R 2.75/call </p>
+<p>R 0.65/sms </p>
     <div>
 
+            <section>
+                <label>Number of calls:</label>
+                <button style="font-weight: bolder;" class="increment">+</button>
+                <button style="font-weight: bolder;" class="decrement">-</button>
+                <span class="call"></span>
+            </section>
 
-        <div>
-            <h1>Items</h1>
-            <div class="item">
-                <input class="itemName" type="text" placeholder="Item Name">
-                <input class="qtyNo" type="number" placeholder="Quantity">
-                <button class="addItem">Add items</button>
-            </div>
+            <section style="margin-top: 0.5em;">
+                <div>
+                    <label>Number of sms's:</label>
+                    <button style="font-weight: bolder;" class="increment1">+</button>
+                    <button style="font-weight: bolder;" class="decrement1">-</button>
+                    <span class="sms"></span>
+                </div>
+            </section>
+
+            <button style="margin: bottom 0.5em; margin-top: 0.5em; font-weight: bolder;" class="Calculate">Calculate Total Cost</button>
             
-            <h2>Items Over 20</h2>
-            <ol class="itemsOver20"></ol>
+            <section class="costbill" style="width: 150px;">
+                <label>Total cost:</label>
+                <span class="totalCost"></span>
+            </section>
+
             
-            <h2>Items 20 and Under</h2>
-            <ol class="items20Under"></ol>
         </div>
-
-        <div>
-            <h1>Total phone bill</h1>
-
-<div>
-
-<section>
-  <label>Number of Calls:</label>
-  <button class="increment">+</button>
-  <button class="decrement">-</button>
-  <span class="call"></span>
-</section>
-
-<section>
-  <div>
-    <label>Number of SMS:</label>
-    <button class="increment1">+</button>
-    <button class="decrement1">-</button>
-    <span class="sms"></span>
-  </div>
-</section>
-
-<section>
-  <label>Total cost:</label>
-  <span class="totalCost"></span>
-</section>
-
-<button class="Calculate">Calculate Total Cost</button>
-</div>
-
-<div>
-    <h1>Transport fee</h1>
-    <section>
-      <input class="morning" id="mRadio" type="radio" name="transport"><label for="mRadio">Morning shift</label>
     </section>
-  
-    <section>
-      <input class="day" id="dRadio" type="radio" name="transport"><label for="dRadio">Afternoon shift</label>
-    </section>
-  
-    <section>
-      <input class="night" id="nRadio" type="radio" name="transport"><label for="nRadio">Night shift</label>
-    </section>
-   
-    <button class="calculateCost">Calculate fee</button>
+
+    </div>
+
+        <div class="tfee">
+            <section class="feeImg">
+            <h2>Transport fee widget</h2>
+            <img src="time.jpg" alt="phone image" style="width: 30%; height: 15%; padding-top: 1.5em; margin-left: 0.2em;">
+            </section>
     
- 
-    <span class="transportCost"></span>
+<section class="feeCon">
+    <p>This is a widget to assist workers to know how much their transport fee will cost depending on the shift they are assigned.</p>
+            <section class='radios0'>
+            <section>
+                <input class="morning" id="mRadio" type="radio" name="transport">
+                <label for="mRadio">Morning</label>
+            </section>
+
+            <section>
+                <input class="day" id="dRadio" type="radio" name="transport">
+                <label for="dRadio">Afternoon</label>
+            </section>
+
+            <section>
+                <input class="night" id="nRadio" type="radio" name="transport">
+                <label for="nRadio">Night</label>
+            </section>
+        </section>
+
+            <button style="margin-top: 0.5em; font-weight: bolder;" class="calculateCost">Calculate fee</button>
+
+
+            <span style="margin-bottom: 0.3em;" class="transportCost"></span>
+
+        </div>
+    </section>
     
 </div>
-  
+
 
 
 
@@ -134,4 +198,5 @@
 
 
 </body>
+
 </html>
