@@ -31,9 +31,9 @@ h2{
 
 
 .greetOptions{
-    padding-top: 10px;
+    margin-bottom: 1em;
+    margin-top: 1em;
 }
-
 
 .transportCost,
 .costbill,
@@ -62,10 +62,14 @@ ol,
     flex: 1;
 }
 
+.selectLA{
+    margin-top: 1em;
+}
+
 .greetButton{
     width: 100px;
-    margin-top: 0.25em;
-    margin-bottom: 0.25em;
+    margin-top: 2em;
+    margin-bottom: 1em;
     font-weight: bolder;
 }
 
